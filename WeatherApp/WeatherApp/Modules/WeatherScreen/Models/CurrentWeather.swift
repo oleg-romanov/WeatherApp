@@ -9,35 +9,35 @@ import Foundation
 
 // MARK: - CurrentWeather
 struct CurrentWeather: Decodable {
-    let coord: Coord
+    let coord: Coord?
     let weather: [Weather]
-    let base: String
+    let base: String?
     let main: Main
-    let visibility: Int
-    let wind: Wind
-    let clouds: Clouds
-    let dt: Int
-    let sys: Sys
-    let timezone: Int
-    let id: Int
-    let name: String
-    let cod: Int
+    let visibility: Int?
+    let wind: Wind?
+    let clouds: Clouds?
+    let dt: Int?
+    let sys: Sys?
+    let timezone: Int?
+    let id: Int?
+    let name: String?
+    let cod: Int?
 }
 
 // MARK: - Clouds
 struct Clouds: Decodable {
-    let all: Int
+    let all: Int?
 }
 
 // MARK: - Coord
 struct Coord: Decodable {
-    let lon, lat: Double
+    let lon, lat: Double?
 }
 
 // MARK: - Main
 struct Main: Decodable {
     let temp, feelsLike, tempMin, tempMax: Double
-    let pressure, humidity, seaLevel, grndLevel: Int
+    let pressure, humidity, seaLevel, grndLevel: Int?
 
     enum CodingKeys: String, CodingKey {
         case temp
@@ -52,20 +52,22 @@ struct Main: Decodable {
 
 // MARK: - Sys
 struct Sys: Decodable {
-    let type, id: Int
-    let country: String
-    let sunrise, sunset: Int
+    let type, id: Int?
+    let country: String?
+    let sunrise, sunset: Int?
 }
 
 // MARK: - Weather
 struct Weather: Decodable {
     let id: Int
-    let main, description, icon: String
+    let main: String
+    let description: String
+    let icon: String
 }
 
 // MARK: - Wind
 struct Wind: Decodable {
-    let speed: Double
-    let deg: Int
-    let gust: Double
+    let speed: Double?
+    let deg: Int?
+    let gust: Double?
 }

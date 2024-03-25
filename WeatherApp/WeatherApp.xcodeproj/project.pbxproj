@@ -21,6 +21,9 @@
 		EA138D8C2BB061A700A9F9AA /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA138D8B2BB061A700A9F9AA /* Response.swift */; };
 		EA138D902BB07E2200A9F9AA /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA138D8F2BB07E2200A9F9AA /* APIConstants.swift */; };
 		EA138D922BB081F200A9F9AA /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA138D912BB081F200A9F9AA /* CurrentWeather.swift */; };
+		EAD59E952BB17DF0006F0A32 /* DailyWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD59E942BB17DF0006F0A32 /* DailyWeatherCell.swift */; };
+		EAD59E982BB18608006F0A32 /* DailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD59E972BB18608006F0A32 /* DailyWeather.swift */; };
+		EAD59E9B2BB21923006F0A32 /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD59E9A2BB21923006F0A32 /* UIColor + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		EA138D8B2BB061A700A9F9AA /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		EA138D8F2BB07E2200A9F9AA /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		EA138D912BB081F200A9F9AA /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		EAD59E942BB17DF0006F0A32 /* DailyWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherCell.swift; sourceTree = "<group>"; };
+		EAD59E972BB18608006F0A32 /* DailyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeather.swift; sourceTree = "<group>"; };
+		EAD59E9A2BB21923006F0A32 /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 				EA138D782BAEFDF500A9F9AA /* MainFiles */,
 				EA138D7C2BAF0EA400A9F9AA /* Services */,
 				EA138D7A2BAF081D00A9F9AA /* Modules */,
+				EAD59E992BB2190A006F0A32 /* Extensions */,
 				EA138D792BAEFE0C00A9F9AA /* Resources */,
 			);
 			path = WeatherApp;
@@ -110,10 +117,11 @@
 		EA138D7B2BAF082900A9F9AA /* WeatherScreen */ = {
 			isa = PBXGroup;
 			children = (
+				EAD59E962BB1854D006F0A32 /* Models */,
+				EAD59E932BB17DDB006F0A32 /* Cell */,
 				EA138D802BAF2CF600A9F9AA /* WeatherScreenProtocols.swift */,
 				EA138D682BAEFD9500A9F9AA /* WeatherScreenController.swift */,
 				EA138D822BAF2D1100A9F9AA /* WeatherScreenPresenter.swift */,
-				EA138D912BB081F200A9F9AA /* CurrentWeather.swift */,
 			);
 			path = WeatherScreen;
 			sourceTree = "<group>";
@@ -145,6 +153,31 @@
 				EA138D8F2BB07E2200A9F9AA /* APIConstants.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		EAD59E932BB17DDB006F0A32 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EAD59E942BB17DF0006F0A32 /* DailyWeatherCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EAD59E962BB1854D006F0A32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA138D912BB081F200A9F9AA /* CurrentWeather.swift */,
+				EAD59E972BB18608006F0A32 /* DailyWeather.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EAD59E992BB2190A006F0A32 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EAD59E9A2BB21923006F0A32 /* UIColor + Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,8 +255,11 @@
 				EA138D832BAF2D1100A9F9AA /* WeatherScreenPresenter.swift in Sources */,
 				EA138D652BAEFD9500A9F9AA /* AppDelegate.swift in Sources */,
 				EA138D882BB05EA100A9F9AA /* APIClient.swift in Sources */,
+				EAD59E952BB17DF0006F0A32 /* DailyWeatherCell.swift in Sources */,
+				EAD59E9B2BB21923006F0A32 /* UIColor + Extensions.swift in Sources */,
 				EA138D8C2BB061A700A9F9AA /* Response.swift in Sources */,
 				EA138D7F2BAF0ED600A9F9AA /* LocationService.swift in Sources */,
+				EAD59E982BB18608006F0A32 /* DailyWeather.swift in Sources */,
 				EA138D672BAEFD9500A9F9AA /* SceneDelegate.swift in Sources */,
 				EA138D902BB07E2200A9F9AA /* APIConstants.swift in Sources */,
 				EA138D852BB0311000A9F9AA /* UserLocation.swift in Sources */,
