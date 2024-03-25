@@ -8,10 +8,12 @@
 import Foundation
 
 protocol WeatherScreenViewInput: AnyObject {
-    func fetchUserLocation(location: UserLocation)
-    func showLocationError(with message: String)
+    func fetchCurrentWeather(by location: UserLocation)
+    func displayCurrentWeather(weather: CurrentWeather)
+    func showErrorAlert(with message: String)
 }
 
 protocol WeatherScreenViewOutput: AnyObject {
     func getUserLocation()
+    func getCurrentWeather(by location: UserLocation) async
 }
