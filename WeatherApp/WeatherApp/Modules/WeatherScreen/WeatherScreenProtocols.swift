@@ -9,11 +9,13 @@ import Foundation
 
 protocol WeatherScreenViewInput: AnyObject {
     func fetchCurrentWeather(by location: UserLocation)
-    func displayCurrentWeather(weather: CurrentWeather)
+    func displayDailyWeather(dailyWeather: [DailyWeatherDTO])
+    func displayCurrentWeather(currWeather: CurrentWeather)
     func showErrorAlert(with message: String)
 }
 
 protocol WeatherScreenViewOutput: AnyObject {
     func getUserLocation()
     func getCurrentWeather(by location: UserLocation) async
+    func getDailyWeather(by location: UserLocation) async
 }
