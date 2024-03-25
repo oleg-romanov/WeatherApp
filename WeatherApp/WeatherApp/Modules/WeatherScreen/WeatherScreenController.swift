@@ -24,12 +24,19 @@ final class WeatherScreenController: UIViewController {
 }
 
 extension WeatherScreenController: WeatherScreenViewInput {
-    func fetchUserLocation(location: UserLocation) {
-        print(location)
+    func displayCurrentWeather(weather: CurrentWeather) {
+        print(weather)
     }
     
-    func showLocationError(with message: String) {
-        print(message)
+    func fetchCurrentWeather(by location: UserLocation) {
+        Task {
+            await presenter?.getCurrentWeather(by: location)
+        }
+    }
+    
+    func showErrorAlert(with message: String) {
+        let alert = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }
-
